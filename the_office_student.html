@@ -1,0 +1,190 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>The Office | Keele University</title>
+    </head>
+    
+    <style>
+    
+        .nav-item .active {
+            background-color: #333333 !important;
+        }
+        
+        .studentapps,
+        .staffapps {
+            margin-left: 20px;
+        }
+        
+        .nav-link {
+            background-color: transparent;
+            color: #000;
+            border: 1px solid gray;
+        }
+        
+        .nav-link:hover {
+            background-color: #333333;
+            color: #fff;
+        }
+        
+        img {
+            width: 50%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .downloads {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+        }
+        
+        .appleDownloads {
+            width: 100%;
+        }
+        
+        .googleDownloads {
+            width: 100%;
+        }
+        
+        body {
+            background-color: #FAFAFA;
+        }
+        
+        h4 {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+        }
+        
+        p {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        small {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+        }
+        
+        .card {
+                margin-bottom: 15px;
+            }
+        
+        .card-footer {
+            background-color: #333333;
+
+        }
+        
+        .card-footer:hover {
+            background-color: #CC2999;
+        }
+        
+        .card-footer p {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        
+        .card-footer a {
+            color: #fff;
+        }
+        
+        .card-footer a:visited {
+            text-decoration: none;
+        }
+        
+        .alert-info {
+            margin-top: 15px;
+        }
+        
+        @media only screen and (max-width: 575px) {
+            .downloads {
+                display: flex;
+            }
+            
+            .appleDownloads,
+            .googleDownloads {
+                width: 100%;
+            }
+        }
+            
+        @media only screen and (max-width: 768px) {
+            .nav-item {
+                margin-bottom: 10px;
+                margin-left: 0;
+            }
+        }
+        
+    </style>
+    
+    <body>
+                     
+        <div class="card-deck">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/original_images-Gmail_logo.png" alt="Gmail logo">
+                    <div class="card-block">
+                        <h4 class="card-title">eVision</h4>
+                            <p class="card-text small">Update personal details, view academic progress and manage your student finances.</p>
+                    </div>
+                    <div class="card-footer" role="button" onclick="window.open('http://mail.keele.ac.uk/')">
+                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to eVison</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/original_images-Drive.png" alt="Google Drive logo">
+                    <div class="card-block">
+                        <h4 class="card-title">Accommodation</h4>
+                        <p class="card-text small">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
+                    </div>
+                    <div class="card-footer" role="button" onclick="window.open('http://docs.keele.ac.uk/')">
+                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Keele People</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/original_images-Calendar.png" alt="Google Calendar logo">
+                    <div class="card-block">
+                        <h4 class="card-title">Staff Directory</h4>
+                        <p class="card-text small">Schedule events and set goals to help stay organised.</p>
+                    </div>
+                    <div class="card-footer" role="button" onclick="window.open('https://www.keele.ac.uk/telephones/')">
+                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to the Directory</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="img/original_images-Account.png" alt="My Account logo">
+                    <div class="card-block">
+                        <h4 class="card-title">My Account</h4>
+                        <p class="card-text small">Security and privacy settings to keep your account safe.</p>
+                    </div>
+                    <div class="card-footer" role="button" onclick="window.open('https://myaccount.google.com/')">
+                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to My Account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            
+            
+        
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </body>
+    
+</html>
