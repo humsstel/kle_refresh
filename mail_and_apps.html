@@ -2,300 +2,206 @@
     
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <title>Mail and Apps | Keele University</title>
     </head>
     
     <style>
     
-        .nav-item .active {
-            background-color: #333333 !important;
-        }
-        
-        .studentapps,
-        .staffapps {
-            margin-left: 20px;
-        }
-        
-        .nav-link {
-            background-color: transparent;
-            color: #000;
-            border: 1px solid gray;
-        }
-        
-        .nav-link:hover {
-            background-color: #333333;
-            color: #fff;
-        }
-        
-        img {
-            width: 50%;
-            margin: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .downloads {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -10px;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto;
-        }
-        
-        .appleDownloads {
-            width: 100%;
-        }
-        
-        .googleDownloads {
-            width: 100%;
-        }
-        
         body {
+            font-family: 'Open Sans', sans-serif;
             background-color: #FAFAFA;
         }
-        
-        h4 {
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
+
+        .card-columns {
+            column-count: 4;
         }
-        
-        p {
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        small {
-            font-family: 'Open Sans', sans-serif;
-            text-align: center;
-        }
-        
-        .card {
-                margin-bottom: 15px;
-            }
         
         .card-footer {
             background-color: #333333;
-
         }
         
         .card-footer:hover {
             background-color: #CC2999;
+            cursor: pointer;
         }
         
         .card-footer p {
             color: #fff;
-            text-align: center;
-            margin-bottom: 0px;
-        }
-        
-        .card-footer a {
-            color: #fff;
-        }
-        
-        .card-footer a:visited {
-            text-decoration: none;
+            margin-bottom: 2px;
         }
         
         .alert-info {
             margin-top: 15px;
         }
         
-        @media only screen and (max-width: 575px) {
-            .downloads {
-                display: flex;
-            }
-            
-            .appleDownloads,
-            .googleDownloads {
-                width: 100%;
-            }
-        }
-            
-        @media only screen and (max-width: 768px) {
-            .nav-item {
-                margin-bottom: 10px;
-                margin-left: 0;
-            }
-        }
-        
     </style>
     
     <body>
-            
-        <div class="container mt-3 mb-3">
-            <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="pills-tab" role="tablist">
-                <li class="nav-item flex-md-fill text-sm-center">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="University web apps" aria-selected="true">Recommended web apps</a>
-                </li>
-                <li class="nav-item flex-md-fill text-sm-center staffapps">
-                    <a class="nav-link " id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="Staff mobile apps" aria-selected="false">Recommended mobile apps</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="University web apps">
-                <div class="container">
-                    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the older <a href="https://healthmail.keele.ac.uk" target="_blank">Webmail service</a>.</div>
-                    
-                        <div class="card-deck">
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div class="card">
-                                <div class="card-header"><span class="badge badge-dark">📲</span></div>
-                                    <img class="card-img-top img-fluid" src="img/original_images-Gmail_logo.png" alt="Gmail logo">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Gmail</h4>
-                                            <p class="card-text small">Access to your Keele University email account.</p>
-                                    </div>
-                                    <div class="card-footer" role="button" onclick="window.open('http://mail.keele.ac.uk/')">
-                                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Gmail</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div class="card">
-                                    <img class="card-img-top img-fluid" src="img/original_images-Drive.png" alt="Google Drive logo">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Google Drive</h4>
-                                        <p class="card-text small">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
-                                    </div>
-                                    <div class="card-footer" role="button" onclick="window.open('http://docs.keele.ac.uk/')">
-                                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Drive</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div class="card">
-                                    <img class="card-img-top img-fluid" src="img/original_images-Calendar.png" alt="Google Calendar logo">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Google Calendar</h4>
-                                        <p class="card-text small">Schedule events and set goals to help stay organised.</p>
-                                    </div>
-                                    <div class="card-footer" role="button" onclick="window.open('http://calendar.keele.ac.uk/')">
-                                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Calendar</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div class="card">
-                                    <img class="card-img-top img-fluid" src="img/original_images-Account.png" alt="My Account logo">
-                                    <div class="card-block">
-                                        <h4 class="card-title">My Account</h4>
-                                        <p class="card-text small">Security and privacy settings to keep your account safe.</p>
-                                    </div>
-                                    <div class="card-footer" role="button" onclick="window.open('https://myaccount.google.com/')">
-                                        <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to My Account</p>
-                                    </div>
-                                </div>
-                            </div>
-                    
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Keep.png" alt="Google Keep logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Keep</h4>
-                                        <p class="card-text small">Make notes, including lists, images, and audio.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://keep.google.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Keep</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Maps.png" alt="Google Maps logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Maps</h4>
-                                        <p class="card-text small">Find businesses, view maps and get travel information</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://maps.google.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Maps</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Meet.png" alt="Google Meet logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Meet</h4>
-                                    <p class="card-text small">Set up voice and video calls using your internet browser.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('http://meet.google.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Meet</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Takeout.png" alt="Google Takeout logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Takeout</h4>
-                                    <p class="card-text small">Download your data from the Google products you use.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://www.google.com/settings/takeout')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Takeout</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Sites.png" alt="Google Sites logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Sites</h4>
-                                        <p class="card-text small">Create simple websites that integrate with other Google tools.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://sites.google.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Sites</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Blogger.png" alt="Blogger logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Blogger</h4>
-                                        <p class="card-text small">Publish a customisable blog to share knowledge or experiences.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('http://blogger.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Blogger</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-YouTube.png" alt="YouTube logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">YouTube</h4>
-                                    <p class="card-text small">Access content or create channels to upload and share videos.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://www.youtube.co.uk/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to YouTube</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Hangouts.png" alt="Webmail logo">
-                                <div class="card-block">
-                                    <h4 class="card-title">Hangouts</h4>
-                                        <p class="card-text small">Use messaging, video and voice chat with one person or a group.</p>
-                                </div>
-                                <div class="card-footer" role="button" onclick="window.open('https://hangouts.google.com/')">
-                                    <p class="small"><i class="fa fa-external-link" aria-hidden="true"></i> Go to Hangouts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the older <a href="https://healthmail.keele.ac.uk" target="_blank">Webmail service</a>.</div>
+        <div class="card-columns">
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Gmail_logo.png" alt="Gmail logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Gmail</h4>
+                        <p class="card-text">Access to your Keele University email account.</p>
+                        <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>&nbsp;App Store</button>
+                        <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>&nbsp;Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('http://mail.keele.ac.uk/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Gmail</p>
                 </div>
             </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Drive.png" alt="Google Drive logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Drive</h4>
+                    <p class="card-text">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('http://docs.keele.ac.uk/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Drive</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Calendar.png" alt="Google Calendar logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Calendar</h4>
+                    <p class="card-text">Schedule events and set goals to help stay organised.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('http://calendar.keele.ac.uk/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Calendar</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Account.png" alt="My Account logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">My Account</h4>
+                    <p class="card-text">Security and privacy settings to keep your account safe.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://myaccount.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to My Account</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Keep.png" alt="Google Keep logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Keep</h4>
+                    <p class="card-text">Make notes, including lists, images, and audio.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://keep.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Keep</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block p-3" src="img/original_images-Maps.png" alt="Google Maps logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Maps</h4>
+                    <p class="card-text">Find businesses, view maps and get travel information</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://maps.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Maps</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Meet.png" alt="Google Meet logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Meet</h4>
+                    <p class="card-text">Set up voice and video calls using your internet browser.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('http://meet.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Meet</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Takeout.png" alt="Google Takeout logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Takeout</h4>
+                    <p class="card-text">Download your data from the Google products you use.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://www.google.com/settings/takeout')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Takeout</p>
+                </div>
+            </div>
+        
+            <div class="card text-center">
+                <img class="img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Sites.png" alt="Google Sites logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Google Sites</h4>
+                    <p class="card-text">Create simple websites that integrate with other Google tools.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://sites.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Sites</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Blogger.png" alt="Blogger logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Blogger</h4>
+                    <p class="card-text">Publish a customisable blog to share knowledge or experiences.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('http://blogger.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Blogger</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-YouTube.png" alt="YouTube logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">YouTube</h4>
+                    <p class="card-text">Access content or create channels to upload and share videos.</p>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://www.youtube.co.uk/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to YouTube</p>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Hangouts.png" alt="Webmail logo">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Hangouts</h4>
+                    <p class="card-text">Use messaging, video and voice chat with one person or a group.</p>
+                    <button type="button" class="btn btn-sm btn-light">App Store</button>
+                    <button type="button" class="btn btn-sm btn-light">Play Store</button>
+                </div>
+                <div class="card-footer" role="button" onclick="window.open('https://hangouts.google.com/')">
+                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Hangouts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+                  
             
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <div class="container">
@@ -445,11 +351,5 @@
                 </div>
             </div>
         </div>
-        
-        
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </body>
-    
 </html>
