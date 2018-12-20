@@ -16,10 +16,6 @@
             background-color: #FAFAFA;
         }
 
-        .card-columns {
-            column-count: 4;
-        }
-        
         .card-footer {
             background-color: #333333;
         }
@@ -37,315 +33,314 @@
         .alert-info {
             margin-top: 15px;
         }
-        
+
+        input[type="radio"][id="student-apps"]:checked ~ .card-columns .staff {
+            display: none;
+        }
+
+        input[type="radio"][id="staff-apps"]:checked ~ .card-columns .student {
+            display: none;
+        }
+
     </style>
     
     <body>
-    <div class="container">
-        <div class="alert alert-info" role="alert"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the older <a href="https://healthmail.keele.ac.uk" target="_blank">Webmail service</a>.</div>
-        <div class="card-columns">
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Gmail_logo.png" alt="Gmail logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Gmail</h4>
-                        <p class="card-text">Access to your Keele University email account.</p>
-                        <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>&nbsp;App Store</button>
-                        <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>&nbsp;Play Store</button>
-                </div>
-                <div class="card-footer" role="button" onclick="window.open('http://mail.keele.ac.uk/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Gmail</p>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-4" style="background-color: #333333"; >
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Apps for all</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#student-apps">Apps for students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#staff-apps">Apps for staff</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+
+            <div class="alert alert-info" role="alert">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the older <a href="https://healthmail.keele.ac.uk" target="_blank">Webmail service</a>.
             </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Drive.png" alt="Google Drive logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Drive</h4>
-                    <p class="card-text">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block staff" src="img/original_images-Gmail_logo.png" alt="Gmail logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Gmail</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Access to your Keele University email account.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>&nbsp;App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>&nbsp;Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('http://mail.keele.ac.uk/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Gmail</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('http://docs.keele.ac.uk/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Drive</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Calendar.png" alt="Google Calendar logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Calendar</h4>
-                    <p class="card-text">Schedule events and set goals to help stay organised.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Drive.png" alt="Google Drive logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Drive</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('http://docs.keele.ac.uk/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Drive</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('http://calendar.keele.ac.uk/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Calendar</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Account.png" alt="My Account logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">My Account</h4>
-                    <p class="card-text">Security and privacy settings to keep your account safe.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Calendar.png" alt="Google Calendar logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Calendar</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Schedule events and set goals to help stay organised.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('http://calendar.keele.ac.uk/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Calendar</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('https://myaccount.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to My Account</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Keep.png" alt="Google Keep logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Keep</h4>
-                    <p class="card-text">Make notes, including lists, images, and audio.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Keep.png" alt="Google Keep logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Keep</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Make notes, including lists, images, and audio.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://keep.google.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Keep</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('https://keep.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Keep</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block p-3" src="img/original_images-Maps.png" alt="Google Maps logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Maps</h4>
-                    <p class="card-text">Find businesses, view maps and get travel information</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block p-3" src="img/original_images-Maps.png" alt="Google Maps logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Maps</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Search locations, plan journeys and get travel information</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://maps.google.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Maps</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('https://maps.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Maps</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Meet.png" alt="Google Meet logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Meet</h4>
-                    <p class="card-text">Set up voice and video calls using your internet browser.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Meet.png" alt="Google Meet logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Meet</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Make voice and video calls using your internet browser.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('http://meet.google.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Meet</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('http://meet.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Meet</p>
-                </div>
-            </div>
 
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Takeout.png" alt="Google Takeout logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Takeout</h4>
-                    <p class="card-text">Download your data from the Google products you use.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Takeout.png" alt="Google Takeout logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Takeout</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Download your data from the Google products you use.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://www.google.com/settings/takeout')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Takeout</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer" role="button" onclick="window.open('https://www.google.com/settings/takeout')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Takeout</p>
-                </div>
-            </div>
-        
-            <div class="card text-center">
-                <img class="img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Sites.png" alt="Google Sites logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Google Sites</h4>
-                    <p class="card-text">Create simple websites that integrate with other Google tools.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
-                </div>
-                <div class="card-footer" role="button" onclick="window.open('https://sites.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Sites</p>
-                </div>
-            </div>
-
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Blogger.png" alt="Blogger logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Blogger</h4>
-                    <p class="card-text">Publish a customisable blog to share knowledge or experiences.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
-                </div>
-                <div class="card-footer" role="button" onclick="window.open('http://blogger.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Blogger</p>
-                </div>
-            </div>
-
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-YouTube.png" alt="YouTube logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">YouTube</h4>
-                    <p class="card-text">Access content or create channels to upload and share videos.</p>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
-                    <button type="button" class="btn btn-sm btn-light"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
-                </div>
-                <div class="card-footer" role="button" onclick="window.open('https://www.youtube.co.uk/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to YouTube</p>
-                </div>
-            </div>
-
-            <div class="card text-center">
-                <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Hangouts.png" alt="Webmail logo">
-                <div class="card-body">
-                    <h4 class="card-title font-weight-bold">Hangouts</h4>
-                    <p class="card-text">Use messaging, video and voice chat with one person or a group.</p>
-                    <button type="button" class="btn btn-sm btn-light">App Store</button>
-                    <button type="button" class="btn btn-sm btn-light">Play Store</button>
-                </div>
-                <div class="card-footer" role="button" onclick="window.open('https://hangouts.google.com/')">
-                    <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Hangouts</p>
-                </div>
-            </div>
-        </div>
-    </div>
-                  
             
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="container">
-                    <div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Please be aware that some of these apps are developed by 3rd parties and Keele University is not responsible for their maintenance.</div>
-                    <div class="card-deck">
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/blackboard_instructor.png" alt="Blackboard Instructor app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Blackboard Instructor</h4>
-                                        <p class="card-text small">Manage your KLE modules whenever, wherever.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm"><a href="https://itunes.apple.com/gb/app/blackboard-instructor/id1088457824?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.blackboard.android.bbinstructor&hl=en_GB" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Sites.png" alt="Google Sites logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Sites</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Create simple websites that integrate with other Google tools.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
                         </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/feedback_studio.jpg" alt="Turnitin Feedback Studio app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Turnitin Feedback Studio</h4>
-                                    <p class="card-text small">For tutors using Turnitin to mark student assignments.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm"><a href="https://itunes.apple.com/gb/app/turnitin-feedback-studio/id657602524?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm"><img class="rounded mx-auto d-block googleDownloads" src="img/google_play_button_bw.png">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://sites.google.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Sites</p>
                         </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/google_authenticator.png" alt="Google Authenticator app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Authenticator</h4>
-                                    <p class="card-text small">Used with Keele IT accounts for two factor authentication.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/gb/app/google-authenticator/id388497605?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_GB" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/upay_chilli.png" alt="UpayChilli app">
-                                <div class="card-block">
-                                    <h4 class="card-title">UpayChilli</h4>
-                                    <p class="card-text small">Manage your Keele Card by linking to a debit/credit card.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/gb/app/upaychilli/id853766709?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.upaychilli.UpayChilli&hl=en_GB"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/safezone.png" alt="SafeZone app">
-                                <div class="card-block">
-                                    <h4 class="card-title">SafeZone</h4>
-                                        <p class="card-text small">Round-the-clock safety reassurance to University staff and students.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/gb/app/safezone/id533054756?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.criticalarc.safezoneapp&hl=en_GB" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Gmail_logo.png" alt="Gmail app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Gmail</h4>
-                                        <p class="card-text small">Access to your Keele University email account.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/us/app/gmail-email-by-google-secure-fast-organized/id422689480?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Blogger.png" alt="Blogger logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Blogger</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Publish a customisable blog to share knowledge or experiences.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
                         </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Calendar.png" alt="Google Calendar app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Calendar</h4>
-                                    <p class="card-text small">Schedule events, set goals and send invites to help stay organised.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/gb/app/google-calendar/id909319292?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.google.android.calendar&hl=en_GB" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('http://blogger.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Blogger</p>
                         </div>
-                        
-                        <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="img/original_images-Drive.png" alt="Google Drive app">
-                                <div class="card-block">
-                                    <h4 class="card-title">Google Drive</h4>
-                                    <p class="card-text small">Create, store and share files such as Docs, Slides, Sheets and Forms.</p>
-                                </div>
-                                <div class="downloads">
-                                    <div class="col-sm">
-                                        <a href="https://itunes.apple.com/gb/app/google-drive-online-backup/id507874739?mt=8" target="_blank"><img class="rounded mx-auto d-block appleDownloads" src="img/app_store_button.png"></a>
-                                    </div>
-                                    <div class="col-sm">
-                                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs&hl=en_GB" target="_blank"><img class="rounded mx-auto d-block img-fluid  googleDownloads" src="img/google_play_button.png"></a>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-YouTube.png" alt="YouTube logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">YouTube</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Access content or create channels to upload and share videos.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://www.youtube.co.uk/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to YouTube</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/original_images-Hangouts.png" alt="Webmail logo">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Hangouts</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Use messaging, video and voice chat with one person or a group.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://hangouts.google.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to Hangouts</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/upay_chilli.png" alt="UpayChilli app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">UpayChilli</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Manage your Keele Card by linking to a debit/credit card.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                        <div class="card-footer text-center" role="button" onclick="window.open('https://www.upaychilli.com/')">
+                            <p class=""><i class="fas fa-external-link-square-alt" aria-hidden="true"></i>&nbsp;&nbsp;Go to UpayChilli</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/safezone.png" alt="SafeZone app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">SafeZone</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Round-the-clock safety reassurance for University staff and students.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="mt-2 mb-4 text-muted" id="student-apps">Apps for students</h3>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3 staff">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/blackboard.png" alt="Blackboard app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Blackboard</h4>
+                            <span class="badge badge-pill badge-info mb-3">Students</span>
+                            <p class="card-text small">Access course content and information related to your studies.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mt-2 mb-4 text-muted" id="staff-apps">Apps for staff</h4>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3 staff">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/google_authenticator.png" alt="Google Authenticator app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Google Authenticator</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <p class="card-text small">Used alongside Keele IT accounts for two factor authentication (2FA).</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3 staff">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/feedback_studio.jpg" alt="Turnitin Feedback Studio app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Turnitin Feedback Studio</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <p class="card-text small">For tutors using Turnitin to mark student assignments.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>&nbsp;App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1 disabled"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>&nbsp;Play Store</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mb-3 staff">
+                        <img class="card-img-top img-fluid w-75 p-3 mx-auto d-block" src="img/blackboard_instructor.png" alt="Blackboard Instructor app">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Blackboard Instructor</h4>
+                            <span class="badge badge-pill badge-success mb-3">Staff</span>
+                            <p class="card-text small">View and manage your KLE modules whenever, wherever.</p>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-app-store-ios" aria-hidden="true">&nbsp;</i>App Store</button>
+                            <button type="button" class="btn btn-sm btn-light mt-1"><i class="fab fa-google-play" aria-hidden="true">&nbsp;</i>Play Store</button>
                         </div>
                     </div>
                 </div>
