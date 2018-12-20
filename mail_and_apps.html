@@ -45,26 +45,40 @@
     </style>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-4" style="background-color: #333333;">
-            <div class="container">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fas fa-users"></i>&nbsp;&nbsp;Apps for all</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#student-apps"><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Apps for students</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#staff-apps"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Apps for staff</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
+        <!-- <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3" style="background-color: #333333;">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="#"><i class="fas fa-users"></i>&nbsp;&nbsp;Apps for all</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#student-apps"><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Apps for students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#staff-apps"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Apps for staff</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div> -->
+
+        
+        
 
         <div class="container">
 
-            <div class="alert alert-info" role="alert" style="margin-top: 70px">
-            <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the older <a href="https://healthmail.keele.ac.uk" target="_blank">Webmail service</a>.
+            <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-dark rounded shadow-sm">
+                <img class="mr-3" src="img/all_apps.svg" alt="Institutional app icon" width="70" height="70">
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Recommended apps for all</h6>
+                    <small>The apps below are recommended for staff <span class="font-weight-bold">and</span> students at Keele University. </small>
+                </div>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;If you are behind a firewall that does not allow access to Google Mail, please use the <a href="https://webmail.keele.ac.uk/" target="_blank">Webmail service</a>.
             </div>
 
             <div class="row">
@@ -287,8 +301,13 @@
                 </div>
             </div>
 
-            <hr class="mb-4">
-            <h4 class="mt-2 mb-4 text-muted" id="student-apps"><i class="fas fa-graduation-cap"></i>&nbsp;&nbsp;Apps for students</h3>
+            <div class="d-flex align-items-center p-3 mb-3 text-white-50 bg-dark rounded shadow-sm">
+                <img class="mr-3" src="img/student_apps.svg" alt="Student app icon" width="70" height="70">
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Recommended apps for students</h6>
+                    <small>The apps below are only recommended for Keele University students. </small>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -305,8 +324,13 @@
                 </div>
             </div>
 
-            <hr class="mb-4">
-            <h4 class="mt-2 mb-4 text-muted" id="staff-apps"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Apps for staff</h4>
+            <div class="d-flex align-items-center p-3 mb-3 text-white-50 bg-dark rounded shadow-sm">
+                <img class="mr-3" src="img/staff_apps.svg" alt="Staff app icon" width="70" height="70">
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Recommended apps for staff</h6>
+                    <small>The apps below are only recommended for Keele University staff. </small>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
